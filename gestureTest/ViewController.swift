@@ -11,8 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+    
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let gestureView = UIView()
+        gestureView.frame = CGRectMake(100, 100, 100, 100)
+        gestureView.backgroundColor = UIColor.blueColor()
+        
+        gestureView.setTapActionWithBlock { 
+            NSLog("set tap gesture successfully")
+        }
+        self.view.addSubview(gestureView)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +30,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 
